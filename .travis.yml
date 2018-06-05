@@ -1,3 +1,7 @@
 language: node_js
+before_script:
+  - npm install jest
+  - npm install babel-jest
+  - npm install babel-plugin-transform-es2015-modules-commonjs
 script:
   - jest
