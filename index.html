@@ -11,36 +11,46 @@
 
 <body>
     <div class="container">
-        <h1>Convert mm to points</h1>
+        <h1 id="item-header">Convert mm to points</h1>
 
         <form>
             <!-- Type of point -->
-            <label for="radio-didot">Didot (0.3759mm)</label>
-            <input type="radio" name="type" id="radio-didot" value="Didot" checked>
-            <label for="radio-hawks">Hawks (0.3514mm)</label>
-            <input type="radio" name="type" id="radio-hawks" value="Hawks">
-            <label for="radio-fournier">Fournier (0.364mm)</label>
-            <input type="radio" name="type" id="radio-fournier" valie="Fournier">
+            <label class="item-type" for="radio-didot">Didot (0.3759mm)</label>
+            <input class="item-type" type="radio" name="type" id="radio-didot" value="Didot" checked>
+            <label class="item-type" for="radio-hawks">Hawks (0.3514mm)</label>
+            <input class="item-type" type="radio" name="type" id="radio-hawks" value="Hawks">
+            <label class="item-type" for="radio-fournier">Fournier (0.364mm)</label>
+            <input class="item-type" type="radio" name="type" id="radio-fournier" valie="Fournier">
             <br>
             <!-- Value in millimetres -->
-            <label for="mm-value">millimetre:</label>
-            <input type="text" name="mm" id="mm-value">
+            <label class="item-measure" for="mm-value">millimetre:</label>
+            <input class="item-input" type="text" name="mm" id="mm-value">
             <br>
             <!-- Value in points -->
-            <label for="point-value">point:</label>
-            <input type="text" name="point" id="point-value">
+            <label class="item-measure" for="point-value">point:</label>
+            <input class="item-input" type="text" name="point" id="point-value">
             <br>
             <!-- Value in ciceros/picas -->
-            <label for="cicero-value">cicero/pica:</label>
-            <input type="text" name="cicero" id="cicero-value">
+            <label class="item-measure" for="cicero-value">cicero/pica:</label>
+            <input class="item-input" type="text" name="cicero" id="cicero-value">
             <br>
             <!-- Value in quads -->
-            <label for="quad-value">quad:</label>
-            <input type="text" name="quad" id="quad-value">
+            <label class="item-measure" for="quad-value">quad:</label>
+            <input class="item-input" type="text" name="quad" id="quad-value">
             <br>
             <!-- Submit button -->
-            <input type="submit" value="Convert">
+            <input id="item-button" type="submit" value="Convert">
         </form>
+
+        <div id="item-description">
+            <p>This app is based on Artemy Lebedev's article about <a href="http://www.artlebedev.com/mandership/81/">The life and extraordinary adventures of a typographical point</a></p>
+        </div>
+
+        <div id="item-footer">
+            <p>Irina Ivanova</p>
+            <p>irina.ivanova@protonmail.com</p>
+            <p>GitHub</p>
+        </div>
     </div>
 
 </body>
