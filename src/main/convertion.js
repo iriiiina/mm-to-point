@@ -37,16 +37,11 @@ export function round(value, precision) {
 
 export function validateValue(value) {
     return  isPositive(value) &&
-            !isZero(value) &&
             isNumber(value);
 }
 
 export function isPositive(value) {
     return value > 0;
-}
-
-export function isZero(value) {
-    return value === 0;
 }
 
 export function isNumber(value) {

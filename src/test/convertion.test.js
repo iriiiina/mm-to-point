@@ -105,18 +105,6 @@ describe("isPositive()", () => {
     });
 });
 
-describe("isZero()", () => {
-    test.each`
-        value       | result
-        ${0}        | ${true}
-        ${1}        |  ${false}
-        ${-1}       | ${false}
-        ${"string"} | ${false}
-    `("returns $result when value is $value", ({value, result}) => {
-        expect(c.isZero(value)).toBe(result);
-    });
-});
-
 describe("isNumber()", () => {
     test.each`
         value       | result
