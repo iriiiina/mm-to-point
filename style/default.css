@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 .container {
     display: flex;
@@ -10,11 +11,13 @@ body {
 #header {
     text-align: center;
     font-size: 24pt;
+    color: #34495e;
 }
 
 #icon-arrows {
     width: 24px;
     margin: 0 0 -5px 0;
+    fill: #34495e;
 }
 
 #types {
@@ -25,8 +28,12 @@ body {
     margin: 0 0 20px 0;
 }
 
+#types a {
+    text-decoration: none;
+}
+
 .type {
-    border: 1px solid black;
+    border: 1px solid #bdc3c7;
     border-radius: 5px;
     margin: 3px;
     padding: 2px;
@@ -35,21 +42,17 @@ body {
 
 .type-value {
     margin: 0;
-    font-size: 8pt;
-    text-align: right;
+    font-size: 7pt;
+    text-align: center;
+    color: #bdc3c7;
+    font-family: "Lucida Console", Monaco, monospace;
 }
 
 .type-name {
     margin: 0;
     font-size: 12pt;
     text-align: center;
-}
-
-.icon-type {
-    width: 15px;
-    position: absolute;
-    margin: -8px 0 0 70px;
-    fill: black;
+    color: #95a5a6;
 }
 
 #form {
@@ -67,17 +70,20 @@ body {
 .form-input input {
     width: 200px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid #3498db;
     border-radius: 10px;
     margin: 0 10px 10px 10px;
     padding: 5px 10px 5px 10px;
     font-size: 16pt;
+    color: #34495e;
+    font-family: "Lucida Console", Monaco, monospace;
 }
 
 .measure {
     margin: 0 0 0 -60px;
     font-size: 10pt;
     width: 100px;
+    color: #3498db;
 }
 
 #form-button {
@@ -88,32 +94,36 @@ body {
     width: 150px;
     height: 50px;
     margin: 20px 0 0 0;
-    font-size: 20pt;
-    border: 1px solid black;
+    font-size: 18pt;
+    border: 1px solid #f39c12;
     border-radius: 10px;
     background-color: white;
     cursor: pointer;
+    color: #f39c12;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 #description {
-    margin: 20px 10px 20px 10px;
+    margin: 30px 10px 30px 10px;
     font-size: 10pt;
+    color: #34495e;
 }
 
-#icon-note {
-    width: 12pt;
+a {
+    color: #2980b9;
 }
 
 #footer {
-    background-color: gray;
+    background-color: #bdc3c7;
     text-align: center;
     padding: 10px 0 10px 0;
+    color: #2c3e50;
 }
 
 #icon-github {
-    width: 48px;
+    width: 36px;
     margin: 5px;
-    fill: black;
+    fill: #2c3e50;
 }
 
 .footer-p {

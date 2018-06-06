@@ -1,4 +1,4 @@
-import * as c from "./../main/convertion";
+import * as f from "./../main/functions";
 
 describe("getPointValue()", () => {
     test.each`
@@ -9,7 +9,7 @@ describe("getPointValue()", () => {
         ${"unexpected"} | ${0}
         ${0}            | ${0}
     `("returns $result when type is $type", ({type, result}) => {
-        expect(c.getPointValue(type)).toBe(result);
+        expect(f.getPointValue(type)).toBe(result);
     });
 });
 
@@ -24,7 +24,7 @@ describe("convertMmToPoint()", () => {
         ${1000} | ${"fournier"}     | ${364}
         ${1}    | ${"unexpcted"}    | ${0}
     `("returns $result when value is $value and type is $type", ({value, type, result}) => {
-        expect(c.convertMmToPoint(value, type)).toBeCloseTo(result);
+        expect(f.convertMmToPoint(value, type)).toBeCloseTo(result);
     });
 });
 
@@ -38,7 +38,7 @@ describe("convertPointToMm()", () => {
         ${0}        | ${"fournier"}     | ${0}
         ${364}      | ${"unexpeceted"}  | ${0}
     `("returns $result when value is $value and type is $type", ({value, type, result}) => {
-        expect(c.convertPointToMm(value, type)).toBeCloseTo(result);
+        expect(f.convertPointToMm(value, type)).toBeCloseTo(result);
     });
 });
 
@@ -50,7 +50,7 @@ describe("convertPointToCicero()", () => {
         ${18}   | ${1.5}
         ${6}    | ${0.5}
     `("returns $result when value is $value", ({value, result}) => {
-        expect(c.convertPointToCicero(value)).toBe(result);
+        expect(f.convertPointToCicero(value)).toBe(result);
     });
 });
 
@@ -62,7 +62,7 @@ describe("convertPointToQuad()", () => {
         ${72}   | ${1.5}
         ${24}   | ${0.5}
     `("returns $result when value is $value", ({value, result}) => {
-        expect(c.convertPointToQuad(value)).toBe(result);
+        expect(f.convertPointToQuad(value)).toBe(result);
     });
 });
 
@@ -75,7 +75,7 @@ describe("round()", () => {
         ${10.999}   | ${0}      | ${11}
         ${0.5821}   | ${3}      | ${0.582}
     `("returns $result when value is $value and precision is $precision", ({value, precision, result}) => {
-        expect(c.round(value, precision)).toBe(result);
+        expect(f.round(value, precision)).toBe(result);
     });
 });
 
@@ -89,7 +89,7 @@ describe("validateValue()", () => {
         ${-48.32}   | ${false}
         ${"string"} | ${false}
     `("returns $result when value is $value", ({value, result}) => {
-        expect(c.validateValue(value)).toBe(result);
+        expect(f.validateValue(value)).toBe(result);
     });
 });
 
@@ -101,7 +101,7 @@ describe("isPositive()", () => {
         ${0}        | ${false}
         ${"string"} | ${false}
     `("returns $result when value is $value", ({value, result}) => {
-        expect(c.isPositive(value)).toBe(result);
+        expect(f.isPositive(value)).toBe(result);
     });
 });
 
@@ -113,6 +113,6 @@ describe("isNumber()", () => {
         ${"string"} | ${false}
         ${true}     | ${false}
     `("returns $result when value is $value", ({value, result}) => {
-        expect(c.isNumber(value)).toBe(result);
+        expect(f.isNumber(value)).toBe(result);
     });
 });
