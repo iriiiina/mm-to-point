@@ -1,4 +1,4 @@
-import * as c from "./../js/convertion";
+import * as c from "./../main/convertion";
 
 describe("getPointValue()", () => {
     test.each`

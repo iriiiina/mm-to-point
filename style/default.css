@@ -1,40 +1,121 @@
+body {
+    margin: 0;
+}
 .container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "header header"
-        "type type"
-        "measure input"
-        "button button"
-        "description description"
-        "footer footer";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#item-header {
-    grid-area: header;
+#header {
+    text-align: center;
+    font-size: 24pt;
 }
 
-.item-type {
-    grid-area: type;
+#icon-arrows {
+    width: 24px;
+    margin: 0 0 -5px 0;
 }
 
-.item-measure {
-    grid-area: measure;
+#types {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 20px 0;
 }
 
-.item-input {
-    grid-area: input;
+.type {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 2px;
+    width: 80px;
 }
 
-#item-button {
-    grid-area: button;
+.type-value {
+    margin: 0;
+    font-size: 8pt;
+    text-align: right;
 }
 
-#item-description {
-    grid-area: description;
+.type-name {
+    margin: 0;
+    font-size: 12pt;
+    text-align: center;
 }
 
-#item-footer {
-    grid-area: footer;
+.icon-type {
+    width: 15px;
+    position: absolute;
+    margin: -8px 0 0 70px;
+    fill: black;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.form-input {
+    align-self: center;
+    width: 250px;
+}
+
+.form-input input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 10px 10px 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 16pt;
+}
+
+.measure {
+    margin: 0 0 0 -60px;
+    font-size: 10pt;
+    width: 100px;
+}
+
+#form-button {
+    align-self: center;
+}
+
+#form-button input {
+    width: 150px;
+    height: 50px;
+    margin: 20px 0 0 0;
+    font-size: 20pt;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#description {
+    margin: 20px 10px 20px 10px;
+    font-size: 10pt;
+}
+
+#icon-note {
+    width: 12pt;
+}
+
+#footer {
+    background-color: gray;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+#icon-github {
+    width: 48px;
+    margin: 5px;
+    fill: black;
+}
+
+.footer-p {
+    margin: 2px 0 2px 0;
 }
