@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style/default.css">
-    <script type="text/javascript" src="src/main/typeSwitching.js"></script>
-    <script type="text/javascript" src="src/main/convertion.js"></script>
-    <script type="text/javascript" src="src/main/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <script type="text/javascript" src="js/main/typeSwitching.js"></script>
+    <script type="text/javascript" src="js/main/convertion.js"></script>
+    <script type="text/javascript" src="js/main/functions.js"></script>
 </head>
 
 <body>
@@ -41,12 +41,12 @@
         <form id="form">
             <!-- Value in millimetres -->
             <div class="form-input">
-                <input type="text" name="mm" id="mm-value" maxlength="10">
+                <input type="text" name="mm" id="mm-value" maxlength="10" onfocus="highlightConvertionType('mm-value');">
                 <span class="measure">mm</span>
             </div>
             <!-- Value in points -->
             <div class="form-input">
-                <input type="text" name="point" id="pt-value" maxlength="10">
+                <input type="text" name="point" id="pt-value" maxlength="10" onfocus="highlightConvertionType('pt-value');">
                 <span class="measure">pt</span>
             </div>
             <!-- Value in ciceros/picas -->

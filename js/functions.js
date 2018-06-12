@@ -1,13 +1,3 @@
-function getConvertionType(mmValue, ptValue) {
-    if (mmValue === "" && ptValue != "") {
-        return "pt";
-    } else if (ptValue === "" && mmValue != "") {
-        return "mm";
-    } else {
-        return "mm";
-    }
-}
-
 function getPointValue(pointType) {
     switch (pointType) {
         case "didot":

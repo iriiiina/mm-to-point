@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - "10"
-before_script:
-  - npm install jest
-  - npm install babel-jest
-  - npm install babel-plugin-transform-es2015-modules-commonjs
-script:
-  - npm test
