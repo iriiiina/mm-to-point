@@ -39,27 +39,22 @@
         <script>checkDidot();</script>
 
         <form id="form">
-            <!-- Value in millimetres -->
             <div class="form-input">
                 <input type="text" name="mm" id="mm-value" maxlength="10" onfocus="highlightConvertionType('mm-value');">
                 <span class="measure">mm</span>
             </div>
-            <!-- Value in points -->
             <div class="form-input">
                 <input type="text" name="point" id="pt-value" maxlength="10" onfocus="highlightConvertionType('pt-value');">
                 <span class="measure">pt</span>
             </div>
-            <!-- Value in ciceros/picas -->
             <div class="form-input">
                 <input type="text" name="cicero" id="cicero-value" maxlength="10" disabled>
                 <span class="measure">cicero</span>
             </div>
-            <!-- Value in quads -->
             <div class="form-input">
                 <input type="text" name="quad" id="quad-value" maxlength="10" disabled>
                 <span class="measure">quad</span>
             </div>
-            <!-- Submit button -->
             <div id="form-button">
                 <input type="button" value="Convert" onclick="convert();">
             </div>
