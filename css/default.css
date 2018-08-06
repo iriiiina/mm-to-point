@@ -103,6 +103,14 @@ body {
     font-family: Verdana, Geneva, sans-serif;
 }
 
+#error {
+    border: 1px solid #ff7675;
+    border-radius: 10px;
+    margin: 20px 10px 0 10px;
+    padding: 10px;
+    color: #ff7675;
+}
+
 #description {
     margin: 30px 10px 30px 10px;
     font-size: 10pt;
