@@ -2,7 +2,8 @@ body {
     margin: 0;
     font-family: Tahoma, Geneva, sans-serif;
 }
-.container {
+
+#container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +80,10 @@ body {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
+.disabled input {
+    background-color: #e8ebec;
+}
+
 .measure {
     margin: 0 0 0 -60px;
     font-size: 10pt;
@@ -98,7 +103,6 @@ body {
     border: 1px solid #f39c12;
     border-radius: 10px;
     background-color: white;
-    cursor: pointer;
     color: #f39c12;
     font-family: Verdana, Geneva, sans-serif;
 }
