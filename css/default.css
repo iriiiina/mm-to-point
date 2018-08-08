@@ -95,6 +95,11 @@ body {
     align-self: center;
 }
 
+#reset-button {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
 #form-button input {
     width: 150px;
     height: 50px;
