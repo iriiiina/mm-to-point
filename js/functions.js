@@ -47,3 +47,10 @@ function isPositive(value) {
 function isNumber(value) {
     return typeof value === "number";
 }
+
+function clearAllFields() {
+    document.getElementById("mm-value").value = "";
+    document.getElementById("pt-value").value = "";
+    document.getElementById("cicero-value").value = "";
+    document.getElementById("quad-value").value = "";
+}
