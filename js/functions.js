@@ -54,3 +54,13 @@ function clearAllFields() {
     document.getElementById("cicero-value").value = "";
     document.getElementById("quad-value").value = "";
 }
+
+function setError(error) {
+    document.getElementById("error").innerText = error;
+    document.getElementById("error").style.display = "block";
+}
+
+function clearError() {
+    document.getElementById("error").innerText = "";
+    document.getElementById("error").style.display = "none";
+}
