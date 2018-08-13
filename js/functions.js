@@ -64,3 +64,7 @@ function clearError() {
     document.getElementById("error").innerText = "";
     document.getElementById("error").style.display = "none";
 }
+
+function focusOnMm() {
+    document.getElementById("mm-value").focus();
+}
