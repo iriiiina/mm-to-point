@@ -108,6 +108,30 @@
                     document.getElementById("convert-button").click();
                 }
             });
+
+            document.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                // 68 === d
+                if (event.keyCode === 68) {
+                    checkDidot();
+                }
+            });
+
+            document.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                // 72 === h
+                if (event.keyCode === 72) {
+                    checkHawks();
+                }
+            });
+
+            document.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                // 70 === f
+                if (event.keyCode === 70) {
+                    checkFournier();
+                }
+            });
         </script>
 
         <div id="error">
