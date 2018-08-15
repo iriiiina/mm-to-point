@@ -159,3 +159,7 @@ a {
 .footer-p {
     margin: 2px 0 2px 0;
 }
+
+#tips {
+    display: none;
+}

@@ -37,6 +37,7 @@ a:hover {
 }
 
 #tips {
+    display: block;
     font-size: 11pt;
     width: 200px;
     position: fixed;
@@ -50,7 +51,7 @@ a:hover {
 }
 
 .tips-faces {
-    width: 14px;
+    width: 20px;
     fill: #34495e;
 }
 
