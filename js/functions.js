@@ -1,4 +1,4 @@
-var mm, pt, convertionType;
+var mm, pt, convertionType = "mm";
 
 function convert() {
     var mmInput = document.getElementById("mm-value").value;
@@ -130,8 +130,30 @@ function clearError() {
     document.getElementById("error").style.display = "none";
 }
 
+function selectOnMm() {
+    document.getElementById("mm-value").select();
+}
+
+function selectOnPt() {
+    document.getElementById("pt-value").select();
+}
+
 function focusOnMm() {
     document.getElementById("mm-value").focus();
+}
+
+function focusOnPt() {
+    document.getElementById("pt-value").focus();
+}
+
+function focusAfterTypeSwitch() {
+    if (convertionType === "mm") {
+        focusOnMm();
+        selectOnMm();
+    } else if (convertionType === "pt") {
+        focusOnPt();
+        selectOnPt();
+    }
 }
 
 function printResults() {

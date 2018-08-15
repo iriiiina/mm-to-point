@@ -7,6 +7,7 @@ function checkDidot() {
     document.getElementById("type-value-didot").style.color = "#f39c12";
     document.getElementById("type-name-didot").style.color = "#f39c12";
     type="didot";
+    focusAfterTypeSwitch();
 }
 
 function checkHawks() {
@@ -16,6 +17,7 @@ function checkHawks() {
     document.getElementById("type-value-hawks").style.color = "#f39c12";
     document.getElementById("type-name-hawks").style.color = "#f39c12";
     type="hawks";
+    focusAfterTypeSwitch();
 }
 
 function checkFournier() {
@@ -25,6 +27,7 @@ function checkFournier() {
     document.getElementById("type-value-fournier").style.color = "#f39c12";
     document.getElementById("type-name-fournier").style.color = "#f39c12";
     type="fournier";
+    focusAfterTypeSwitch();
 }
 
 function uncheckDidot() {

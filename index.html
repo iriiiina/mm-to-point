@@ -65,15 +65,15 @@
             </div>
         </div>
 
-        <script>checkDidot();</script>
+        <script></script>
 
         <form id="form">
             <div class="form-input">
-                <input type="number" name="mm" id="mm-value" maxlength="10" onfocus="highlightConvertionType('mm-value');" onClick="this.select();">
+                <input type="number" name="mm" id="mm-value" maxlength="10" onfocus="highlightConvertionType('mm-value');" onClick="selectOnMm();">
                 <span class="measure">mm</span>
             </div>
             <div class="form-input">
-                <input type="number" name="point" id="pt-value" maxlength="10" onfocus="highlightConvertionType('pt-value');" onClick="this.select();">
+                <input type="number" name="point" id="pt-value" maxlength="10" onfocus="highlightConvertionType('pt-value');" onClick="selectOnPt();">
                 <span class="measure">pt</span>
             </div>
             <div class="form-input disabled">
@@ -91,7 +91,7 @@
         </form>
 
         <script>
-            focusOnMm();
+            checkDidot();
             
             document.getElementById("mm-value").addEventListener("keyup", function(event) {
                 event.preventDefault();
