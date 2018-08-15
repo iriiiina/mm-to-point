@@ -25,7 +25,7 @@ a {
     fill: #34495e;
 }
 
-#types {
+#standards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,11 +33,11 @@ a {
     margin: 0 0 20px 0;
 }
 
-#types a {
+#standards a {
     text-decoration: none;
 }
 
-.type {
+.standard {
     border: 1px solid #bdc3c7;
     border-radius: 5px;
     margin: 3px;
@@ -45,7 +45,7 @@ a {
     width: 80px;
 }
 
-.type-value {
+.standard-value {
     margin: 0;
     font-size: 7pt;
     text-align: center;
@@ -53,7 +53,7 @@ a {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-.type-name {
+.standard-name {
     margin: 0;
     font-size: 12pt;
     text-align: center;

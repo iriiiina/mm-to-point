@@ -1,4 +1,4 @@
-var mm, pt, convertionType = "mm";
+var mm, pt, convertionType = "mm", isExpanded = true;
 
 function convert() {
     var mmInput = document.getElementById("mm-value").value;
@@ -14,11 +14,11 @@ function convert() {
 function setPtAndMm(mmInput, ptInput) {
     switch (convertionType) {
         case "mm":
-            pt = convertMmToPoint(mmInput, type);
+            pt = convertMmToPoint(mmInput, standard);
             mm = mmInput;
             break;
         case "pt":
-            mm = convertPointToMm(ptInput, type);
+            mm = convertPointToMm(ptInput, standard);
             pt = ptInput;
             break;
         default:
@@ -43,8 +43,8 @@ function highlightConvertionType(elementId) {
     }
 }
 
-function getPointValue(pointType) {
-    switch (pointType) {
+function getPointValue(standard) {
+    switch (standard) {
         case "didot":
             return 0.3759;
             break;
@@ -60,12 +60,12 @@ function getPointValue(pointType) {
     }
 }
 
-function convertMmToPoint(mmValue, pointType) {
-    return mmValue / getPointValue(pointType);
+function convertMmToPoint(mmValue, standard) {
+    return mmValue / getPointValue(standard);
 }
 
-function convertPointToMm(pointValue, pointType) {
-    return getPointValue(pointType) > 0 ? pointValue * getPointValue(pointType) : 0;
+function convertPointToMm(pointValue, standard) {
+    return getPointValue(standard) > 0 ? pointValue * getPointValue(standard) : 0;
 }
 
 function convertPointToCicero(value) {
@@ -118,6 +118,7 @@ function clearAllFields() {
     document.getElementById("cicero-value").value = "";
     document.getElementById("quad-value").value = "";
     clearError();
+    checkDidot();
 }
 
 function setError(error) {
@@ -161,4 +162,18 @@ function printResults() {
     document.getElementById("pt-value").value = round(pt, 2);
     document.getElementById("cicero-value").value = round(convertPointToCicero(pt), 2);
     document.getElementById("quad-value").value = round(convertPointToQuad(pt), 2);
+}
+
+function expandTips() {
+    if (isExpanded === true) {
+        isExpanded = false;
+        document.getElementById("tips-hidden").style.display = "none";
+        document.getElementById("tips-close").style.display = "inline";
+        document.getElementById("tips-open").style.display = "none";
+    } else {
+        isExpanded = true;
+        document.getElementById("tips-hidden").style.display = "block";
+        document.getElementById("tips-close").style.display = "none";
+        document.getElementById("tips-open").style.display = "inline";
+    }
 }

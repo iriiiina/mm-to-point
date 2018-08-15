@@ -20,7 +20,7 @@
     <!-- JS and CSS files -->
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/768px.css" media="screen and (min-width:768px)">
-    <script type="text/javascript" src="js/typeSwitching.js"></script>
+    <script type="text/javascript" src="js/standardSwitching.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
 
     <!-- Social media meta tags -->
@@ -42,30 +42,42 @@
 </head>
 
 <body>
+    <div id="tips">
+        <p id="tips-header" onclick="expandTips();">Helpful Tips 
+            <svg class="tips-faces" id="tips-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-280c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
+            <svg class="tips-faces" id="tips-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm141.4 389.4c-37.8 37.8-88 58.6-141.4 58.6s-103.6-20.8-141.4-58.6S48 309.4 48 256s20.8-103.6 58.6-141.4S194.6 56 248 56s103.6 20.8 141.4 58.6S448 202.6 448 256s-20.8 103.6-58.6 141.4zM328 224c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm-160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm194.4 64H133.6c-8.2 0-14.5 7-13.5 15 7.5 59.2 58.9 105 121.1 105h13.6c62.2 0 113.6-45.8 121.1-105 1-8-5.3-15-13.5-15z"></path></svg>
+        </p>
+        <div id="tips-hidden">
+            <p>You can use hot keys <code>[D]</code>, <code>[H]</code> and <code>[F]</code> for quick switching between pt standards.</p>
+            <p>If focus remains on mm field, then mm value will be converted to pt.</p>
+            <p>If focus remains on pt field, then pt value will be converted to mm.</p>
+            <p><code>[Enter]</code> works as well for submitting the form.</p>
+        </div>
+    </div>
+
     <div id="container">
         <h1 id="header">mm
             <svg id="icon-arrows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
                 />
             </svg>
-            pt</h1>
+            pt
+        </h1>
 
-        <div id="types">
-            <div class="type" id="type-didot" onclick="checkDidot();">
-                <p class="type-value" id="type-value-didot">1pt = 0.3759mm</p>
-                <p class="type-name" id="type-name-didot">Didot</p>
+        <div id="standards">
+            <div class="standard" id="standard-didot" onclick="checkDidot();">
+                <p class="standard-value" id="standard-value-didot">1pt = 0.3759mm</p>
+                <p class="standard-name" id="standard-name-didot">Didot</p>
             </div>
-            <div class="type" id="type-hawks" onclick="checkHawks();">
-                <p class="type-value" id="type-value-hawks">1pt = 0.3514mm</p>
-                <p class="type-name" id="type-name-hawks">Hawks</p>
+            <div class="standard" id="standard-hawks" onclick="checkHawks();">
+                <p class="standard-value" id="standard-value-hawks">1pt = 0.3514mm</p>
+                <p class="standard-name" id="standard-name-hawks">Hawks</p>
             </div>
-            <div class="type" id="type-fournier" onclick="checkFournier();">
-                <p class="type-value" id="type-value-fournier">1pt = 0.364mm</p>
-                <p class="type-name" id="type-name-fournier">Fournier</p>
+            <div class="standard" id="standard-fournier" onclick="checkFournier();">
+                <p class="standard-value" id="standard-value-fournier">1pt = 0.364mm</p>
+                <p class="standard-name" id="standard-name-fournier">Fournier</p>
             </div>
         </div>
-
-        <script></script>
 
         <form id="form">
             <div class="form-input">
