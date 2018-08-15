@@ -4,11 +4,10 @@ function convert() {
     var mmInput = document.getElementById("mm-value").value;
     var ptInput = document.getElementById("pt-value").value;
 
-    validateInput(mmInput, ptInput, convertionType);
-
-    setPtAndMm(mmInput, ptInput);
-
-    printResults();
+    if (validateInput(mmInput, ptInput, convertionType)) {
+        setPtAndMm(mmInput, ptInput);
+        printResults();
+    }
 }
 
 function setPtAndMm(mmInput, ptInput) {
@@ -84,24 +83,29 @@ function validateInput(mmInput, ptInput, convertionType) {
     if (convertionType === "mm") {
         if (mmInput === "" || mmInput === null) {
             setError("Please fill millimeters value or move focus to points field");
+            return false;
         } else if (isPositive(mmInput) && isNumber(mmInput)) {
             clearError();
+            return true;
         } else {
             setError("Millimeters can be only positive integer or float number");
+            return false;
         }
     } else if (convertionType === "pt") {
         if (ptInput === "" || ptInput === null) {
             setError("Please fill points value or move focus to millimeters field");
+            return false;
         } else if (isPositive(ptInput) && isNumber(ptInput)) {
             clearError();
+            return true;
         } else {
             setError("Points can be only positive integer or float number");
+            return false;
         }
     } else {
         setError("Something went wrong, please refresh the page");
+        return false;
     }
-
-    return;
 }
 
 function isPositive(value) {
@@ -117,11 +121,29 @@ function clearAllFields() {
     document.getElementById("pt-value").value = "";
     document.getElementById("cicero-value").value = "";
     document.getElementById("quad-value").value = "";
+}
+
+function resetFields() {
+    clearAllFields();
     clearError();
     checkDidot();
 }
 
+function clearFieldOnError() {
+    document.getElementById("cicero-value").value = "";
+    document.getElementById("quad-value").value = "";
+
+    if (convertionType === "mm") {
+        document.getElementById("pt-value").value = "";
+    } else if (convertionType === "pt") {
+        document.getElementById("mm-value").value = "";
+    } else {
+        setError("Something went wrong, please refresh the page");
+    }
+}
+
 function setError(error) {
+    clearFieldOnError();
     document.getElementById("error").innerText = error;
     document.getElementById("error").style.display = "block";
 }
@@ -158,10 +180,12 @@ function focusAfterTypeSwitch() {
 }
 
 function printResults() {
-    document.getElementById("mm-value").value = round(mm, 2);
-    document.getElementById("pt-value").value = round(pt, 2);
-    document.getElementById("cicero-value").value = round(convertPointToCicero(pt), 2);
-    document.getElementById("quad-value").value = round(convertPointToQuad(pt), 2);
+    if (mm != "" && mm != null && mm != "0" && pt != "" && pt != null && pt != "0") {
+        document.getElementById("mm-value").value = round(mm, 2);
+        document.getElementById("pt-value").value = round(pt, 2);
+        document.getElementById("cicero-value").value = round(convertPointToCicero(pt), 2);
+        document.getElementById("quad-value").value = round(convertPointToQuad(pt), 2);
+    }
 }
 
 function expandTips() {
