@@ -117,6 +117,7 @@ function clearAllFields() {
     document.getElementById("pt-value").value = "";
     document.getElementById("cicero-value").value = "";
     document.getElementById("quad-value").value = "";
+    clearError();
 }
 
 function setError(error) {
