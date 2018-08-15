@@ -48,11 +48,12 @@ a:hover {
 
 #tips-header {
     cursor: pointer;
+    color: #f39c12;
 }
 
 .tips-faces {
     width: 20px;
-    fill: #34495e;
+    fill: #f39c12;
 }
 
 #tips-close {
