@@ -90,7 +90,25 @@
             </div>
         </form>
 
-        <script>focusOnMm();</script>
+        <script>
+            focusOnMm();
+            
+            document.getElementById("mm-value").addEventListener("keyup", function(event) {
+                event.preventDefault();
+                // 13 === Enter
+                if (event.keyCode === 13) {
+                    document.getElementById("convert-button").click();
+                }
+            });
+
+            document.getElementById("pt-value").addEventListener("keyup", function(event) {
+                event.preventDefault();
+                // 13 === Enter
+                if (event.keyCode === 13) {
+                    document.getElementById("convert-button").click();
+                }
+            });
+        </script>
 
         <div id="error">
         </div>
