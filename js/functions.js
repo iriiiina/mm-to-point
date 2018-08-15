@@ -1,3 +1,48 @@
+var mm, pt, convertionType;
+
+function convert() {
+    var mmInput = document.getElementById("mm-value").value;
+    var ptInput = document.getElementById("pt-value").value;
+
+    validateInput(mmInput, ptInput, convertionType);
+
+    setPtAndMm(mmInput, ptInput);
+
+    printResults();
+}
+
+function setPtAndMm(mmInput, ptInput) {
+    switch (convertionType) {
+        case "mm":
+            pt = convertMmToPoint(mmInput, type);
+            mm = mmInput;
+            break;
+        case "pt":
+            mm = convertPointToMm(ptInput, type);
+            pt = ptInput;
+            break;
+        default:
+            setError("Something went wrong, please refresh the page");
+    }
+
+    return;
+}
+
+function highlightConvertionType(elementId) {
+    switch (elementId) {
+        case "mm-value":
+            document.getElementById("mm-value").style.borderColor = "#f39c12";
+            document.getElementById("pt-value").style.borderColor = "#3498db";
+            convertionType = "mm";
+            break;
+        case "pt-value":
+            document.getElementById("pt-value").style.borderColor = "#f39c12";
+            document.getElementById("mm-value").style.borderColor = "#3498db";
+            convertionType = "pt";
+            break;
+    }
+}
+
 function getPointValue(pointType) {
     switch (pointType) {
         case "didot":
@@ -16,11 +61,11 @@ function getPointValue(pointType) {
 }
 
 function convertMmToPoint(mmValue, pointType) {
-    return mmValue * getPointValue(pointType);
+    return mmValue / getPointValue(pointType);
 }
 
 function convertPointToMm(pointValue, pointType) {
-    return getPointValue(pointType) > 0 ? pointValue / getPointValue(pointType) : 0;
+    return getPointValue(pointType) > 0 ? pointValue * getPointValue(pointType) : 0;
 }
 
 function convertPointToCicero(value) {
@@ -32,7 +77,7 @@ function convertPointToQuad(value) {
 }
 
 function round(value, precision) {
-    return Number(value.toFixed(precision));
+    return Number(value).toFixed(precision);
 }
 
 function validateInput(mmInput, ptInput, convertionType) {
@@ -86,4 +131,11 @@ function clearError() {
 
 function focusOnMm() {
     document.getElementById("mm-value").focus();
+}
+
+function printResults() {
+    document.getElementById("mm-value").value = round(mm, 2);
+    document.getElementById("pt-value").value = round(pt, 2);
+    document.getElementById("cicero-value").value = round(convertPointToCicero(pt), 2);
+    document.getElementById("quad-value").value = round(convertPointToQuad(pt), 2);
 }
