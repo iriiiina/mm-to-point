@@ -2,37 +2,14 @@ var mm, pt, convertionType;
 
 function convert() {
     // TODO try to convert into Number
-    var mmInput = Number(document.getElementById("mm-value").value);
-    var ptInput = Number(document.getElementById("pt-value").value);
+    var mmInput = document.getElementById("mm-value").value;
+    var ptInput = document.getElementById("pt-value").value;
 
-    setConvertionType(mmInput, ptInput);
+    validateInput(mmInput, ptInput, convertionType);
 
-    validateInput(mmInput, ptInput);
-    setPtAndMm(mmInput, ptInput);
+    //setPtAndMm(mmInput, ptInput);
 
-    printResults();
-}
-
-function setConvertionType(mmValue, ptValue) {
-    if (mmValue != "" && document.getElementById("mm-value").style.borderColor === "#f39c12") {
-        convertionType = "mm";
-        return;
-    }
-    
-    if (ptValue != "" && document.getElementById("pt-value").style.borderColor === "#f39c12") {
-        convertionType = "pt";
-        return;
-    }
-}
-
-function validateInput(mmInput, ptInput) {
-    if (mmInput != "" && !validateValue(mmInput)) {
-        console.log("mmInput error");
-    }
-    
-    if (ptInput != "" && !validateValue(ptInput)) {
-        console.log("ptInput error");
-    }
+    //printResults();
 }
 
 function setPtAndMm(mmInput, ptInput) {
@@ -55,10 +32,12 @@ function highlightConvertionType(elementId) {
         case "mm-value":
             document.getElementById("mm-value").style.borderColor = "#f39c12";
             document.getElementById("pt-value").style.borderColor = "#3498db";
+            convertionType = "mm";
             break;
         case "pt-value":
             document.getElementById("pt-value").style.borderColor = "#f39c12";
             document.getElementById("mm-value").style.borderColor = "#3498db";
+            convertionType = "pt";
             break;
     }
 }

@@ -35,9 +35,28 @@ function round(value, precision) {
     return Number(value.toFixed(precision));
 }
 
-function validateValue(value) {
-    return isPositive(value) &&
-        isNumber(value);
+function validateInput(mmInput, ptInput, convertionType) {
+    if (convertionType === "mm") {
+        if (mmInput === "" || mmInput === null) {
+            setError("Please fill millimeters value or move focus to points field");
+        } else if (isPositive(mmInput) && isNumber(mmInput)) {
+            clearError();
+        } else {
+            setError("Millimeters can be only positive integer or float number");
+        }
+    } else if (convertionType === "pt") {
+        if (ptInput === "" || ptInput === null) {
+            setError("Please fill points value or move focus to millimeters field");
+        } else if (isPositive(ptInput) && isNumber(ptInput)) {
+            clearError();
+        } else {
+            setError("Points can be only positive integer or float number");
+        }
+    } else {
+        setError("Something went wrong, please refresh the page");
+    }
+
+    return;
 }
 
 function isPositive(value) {
@@ -45,7 +64,7 @@ function isPositive(value) {
 }
 
 function isNumber(value) {
-    return typeof value === "number";
+    return typeof Number(value) === "number";
 }
 
 function clearAllFields() {
