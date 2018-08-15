@@ -51,6 +51,10 @@ a:hover {
     color: #f39c12;
 }
 
+#tips-header:hover {
+    opacity: 0.7;
+}
+
 .tips-faces {
     width: 20px;
     fill: #f39c12;
