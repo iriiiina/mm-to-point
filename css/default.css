@@ -127,6 +127,7 @@ a {
     margin: 20px 10px 0 10px;
     padding: 10px;
     color: #ff7675;
+    display: none;
 }
 
 #footer {
