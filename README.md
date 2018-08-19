@@ -1,26 +1,24 @@
 [![Licence](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 # mm-to-point
-Small app that helps you to convert millimetres to typographical points of different standards and vice versa. From Artemy Lebedev's article [The life and extraordinary adventures of a typographical point](http://www.artlebedev.com/mandership/81/) you can find out that there are at least 3 different standards of typographical point for historical reasons:
+Small online converter that helps you to convert millimetres to typographical points of different standards and vice versa. From Artemy Lebedev's article [The life and extraordinary adventures of a typographical point](http://www.artlebedev.com/mandership/81/) you can find out that there are at least 3 different standards of typographical point for historical reasons. So you may have a different results according to where are you located in the world.
 * Didot: 1pt = 0.3759mm
 * Hawks: 1pt = 0.3514mm
 * Fournier: 1pt = 0.364mm
 
-## Authors
-
-Irina Ivanova and Nikita Ivanov
-
-## Contributions
+## Author
+Irina Ivanova, [irina.ivanova@protonmail.com](irina.ivanova@protonmail.com)
 
 ## Issues and Problems
+If you have any issues, problems, questions or suggestions about the converter, please let me know. You van either write me to my email [irina.ivanova@protonmail.com](irina.ivanova@protonmail.com) or create an Issue here at this GitHub repo.
 
-## Donations and Ads
+## Ads
+I am planning to insert some ads to pay back my free time I spent on this app. This will be small civil add, not the overhelming one, so please don't be mad about it.
 
 ## Icons and Pictures
 
-### Exchange Icon by Font Awesome
-
-Icon is free to use under [Font Awesome Free License](https://fontawesome.com/license/free). Some changes were made:
+### Icon by Font Awesome
+Font Awesome icons are free to use under [Font Awesome Free License](https://fontawesome.com/license/free). Some changes were made:
 
 * Not used tags are removed: `aria-hidden`, `data-prefix`, `data-icon`, `class`, `role`, `fill`
 * Filling color and icon size are changed according to design
