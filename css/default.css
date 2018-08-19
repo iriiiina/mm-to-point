@@ -4,7 +4,7 @@ body {
 }
 
 a {
-    color: #2980b9;
+    color: #2980B9;
 }
 
 #container {
@@ -16,13 +16,13 @@ a {
 #header {
     text-align: center;
     font-size: 24pt;
-    color: #34495e;
+    color: #34495E;
 }
 
 #icon-arrows {
     width: 24px;
     margin: 0 0 -5px 0;
-    fill: #34495e;
+    fill: #34495E;
 }
 
 #standards {
@@ -38,7 +38,7 @@ a {
 }
 
 .standard {
-    border: 1px solid #bdc3c7;
+    border: 1px solid #BDC3C7;
     border-radius: 5px;
     margin: 3px;
     padding: 2px;
@@ -49,7 +49,7 @@ a {
     margin: 0;
     font-size: 7pt;
     text-align: center;
-    color: #bdc3c7;
+    color: #BDC3C7;
     font-family: "Lucida Console", Monaco, monospace;
 }
 
@@ -57,7 +57,7 @@ a {
     margin: 0;
     font-size: 12pt;
     text-align: center;
-    color: #95a5a6;
+    color: #95A5A6;
 }
 
 #form {
@@ -75,24 +75,24 @@ a {
 .form-input input {
     width: 200px;
     height: 30px;
-    border: 1px solid #3498db;
+    border: 1px solid #3498DB;
     border-radius: 10px;
     margin: 0 10px 10px 10px;
     padding: 5px 10px 5px 10px;
     font-size: 16pt;
-    color: #34495e;
+    color: #34495E;
     font-family: "Lucida Console", Monaco, monospace;
 }
 
 .disabled input {
-    background-color: #e8ebec;
+    background-color: #E8EBEC;
 }
 
 .measure {
     margin: 0 0 0 -60px;
     font-size: 10pt;
     width: 100px;
-    color: #3498db;
+    color: #3498DB;
 }
 
 #form-button {
@@ -103,7 +103,7 @@ a {
     margin-right: 10px;
     font-size: 12px;
     border: none;
-    color: #2980b9;
+    color: #2980B9;
     font-family: Tahoma, Geneva, sans-serif;
     text-decoration: underline;
     background-color: #FFFFFF;
@@ -114,19 +114,19 @@ a {
     height: 50px;
     margin: 20px 0 0 0;
     font-size: 18pt;
-    border: 1px solid #f39c12;
+    border: 1px solid #F39C12;
     border-radius: 10px;
-    background-color: white;
-    color: #f39c12;
+    background-color: #FFFFFF;
+    color: #F39C12;
     font-family: Verdana, Geneva, sans-serif;
 }
 
 #error {
-    border: 1px solid #ff7675;
+    border: 1px solid #FF7675;
     border-radius: 10px;
     margin: 20px 10px 0 10px;
     padding: 10px;
-    color: #ff7675;
+    color: #FF7675;
     display: none;
 }
 
@@ -140,20 +140,20 @@ a {
 #description {
     margin: 30px 10px 30px 10px;
     font-size: 10pt;
-    color: #34495e;
+    color: #34495E;
 }
 
 #contacts {
     text-align: center;
     padding: 10px 0 10px 0;
-    color: #2c3e50;
+    color: #2C3E50;
     font-size: 10pt;
 }
 
 #icon-github {
     width: 36px;
     margin: 5px;
-    fill: #2c3e50;
+    fill: #2C3E50;
 }
 
 .footer-p {

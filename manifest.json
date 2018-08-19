@@ -1,0 +1,25 @@
+{
+  "name": "mm-to-pt | Converter",
+  "short_name": "mm-to-pt",
+  "icons": [
+    {
+        "src": "/img/meta/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "/img/meta/icon-256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "/img/meta/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#FFFFFF",
+  "theme_color": "#F39C12",
+  "display": "browser"
+}
