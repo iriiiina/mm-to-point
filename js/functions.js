@@ -82,24 +82,24 @@ function round(value, precision) {
 function validateInput(mmInput, ptInput, convertionType) {
     if (convertionType === "mm") {
         if (mmInput === "" || mmInput === null) {
-            setError("Please fill millimeters value or move focus to points field");
+            setError("Please fill millimeters value or move focus to points field", "mm-title");
             return false;
         } else if (isPositive(mmInput) && isNumber(mmInput)) {
             clearError();
             return true;
         } else {
-            setError("Millimeters can be only positive integer or float number");
+            setError("Millimeters can be only positive integer or float number", "mm-title");
             return false;
         }
     } else if (convertionType === "pt") {
         if (ptInput === "" || ptInput === null) {
-            setError("Please fill points value or move focus to millimeters field");
+            setError("Please fill points value or move focus to millimeters field", "pt-title");
             return false;
         } else if (isPositive(ptInput) && isNumber(ptInput)) {
             clearError();
             return true;
         } else {
-            setError("Points can be only positive integer or float number");
+            setError("Points can be only positive integer or float number", "pt-title");
             return false;
         }
     } else {
@@ -142,15 +142,18 @@ function clearFieldOnError() {
     }
 }
 
-function setError(error) {
+function setError(error, title) {
     clearFieldOnError();
     document.getElementById("error").innerText = error;
     document.getElementById("error").style.display = "block";
+    document.getElementById(title).style.color = "#ff7675";
 }
 
 function clearError() {
     document.getElementById("error").innerText = "";
     document.getElementById("error").style.display = "none";
+    document. getElementById("mm-title").style.color = "#3498db";
+    document. getElementById("pt-title").style.color = "#3498db";
 }
 
 function selectOnMm() {
