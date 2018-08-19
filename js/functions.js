@@ -1,7 +1,7 @@
 var mm, pt, convertionType = "mm", isExpanded = true;
 
 var orange = "#F39C12",
-    blue = "#3498DB",
+    blue = "#1E77B3",
     red = "#FF7675",
     gray = "#BDC3C7";
 
