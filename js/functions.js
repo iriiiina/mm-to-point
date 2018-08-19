@@ -81,25 +81,19 @@ function round(value, precision) {
 
 function validateInput(mmInput, ptInput, convertionType) {
     if (convertionType === "mm") {
-        if (mmInput === "" || mmInput === null) {
-            setError("Please fill millimeters value or move focus to points field", "mm-title");
-            return false;
-        } else if (isPositive(mmInput) && isNumber(mmInput)) {
+        if (isPositive(mmInput) && isNumber(mmInput)) {
             clearError();
             return true;
         } else {
-            setError("Millimeters can be only positive integer or float number", "mm-title");
+            setError("Millimeters can be only positive integer or float number");
             return false;
         }
     } else if (convertionType === "pt") {
-        if (ptInput === "" || ptInput === null) {
-            setError("Please fill points value or move focus to millimeters field", "pt-title");
-            return false;
-        } else if (isPositive(ptInput) && isNumber(ptInput)) {
+        if (isPositive(ptInput) && isNumber(ptInput)) {
             clearError();
             return true;
         } else {
-            setError("Points can be only positive integer or float number", "pt-title");
+            setError("Points can be only positive integer or float number");
             return false;
         }
     } else {
@@ -142,11 +136,24 @@ function clearFieldOnError() {
     }
 }
 
-function setError(error, title) {
+function setError(error) {
     clearFieldOnError();
     document.getElementById("error").innerText = error;
     document.getElementById("error").style.display = "block";
-    document.getElementById(title).style.color = "#ff7675";
+    setRedTitle();
+}
+
+function setRedTitle() {
+    if (convertionType === "mm") {
+        document.getElementById("mm-title").style.color = "#ff7675";
+        document.getElementById("pt-title").style.color = "#3498db";
+    } else if (convertionType === "pt") {
+        document.getElementById("pt-title").style.color = "#ff7675";
+        document.getElementById("mm-title").style.color = "#3498db";
+    } else {
+        document.getElementById("pt-title").style.color = "#3498db";
+        document.getElementById("mm-title").style.color = "#3498db";
+    }
 }
 
 function clearError() {
