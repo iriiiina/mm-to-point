@@ -1,5 +1,10 @@
 var mm, pt, convertionType = "mm", isExpanded = true;
 
+var orange = "#F39C12",
+    blue = "#3498DB",
+    red = "#FF7675",
+    gray = "#BDC3C7";
+
 function convert() {
     var mmInput = document.getElementById("mm-value").value;
     var ptInput = document.getElementById("pt-value").value;
@@ -30,13 +35,13 @@ function setPtAndMm(mmInput, ptInput) {
 function highlightConvertionType(elementId) {
     switch (elementId) {
         case "mm-value":
-            document.getElementById("mm-value").style.borderColor = "#f39c12";
-            document.getElementById("pt-value").style.borderColor = "#3498db";
+            document.getElementById("mm-value").style.borderColor = orange;
+            document.getElementById("pt-value").style.borderColor = blue;
             convertionType = "mm";
             break;
         case "pt-value":
-            document.getElementById("pt-value").style.borderColor = "#f39c12";
-            document.getElementById("mm-value").style.borderColor = "#3498db";
+            document.getElementById("pt-value").style.borderColor = orange;
+            document.getElementById("mm-value").style.borderColor = blue;
             convertionType = "pt";
             break;
     }
@@ -145,22 +150,22 @@ function setError(error) {
 
 function setRedTitle() {
     if (convertionType === "mm") {
-        document.getElementById("mm-title").style.color = "#ff7675";
-        document.getElementById("pt-title").style.color = "#3498db";
+        document.getElementById("mm-title").style.color = red;
+        document.getElementById("pt-title").style.color = blue;
     } else if (convertionType === "pt") {
-        document.getElementById("pt-title").style.color = "#ff7675";
-        document.getElementById("mm-title").style.color = "#3498db";
+        document.getElementById("pt-title").style.color = red;
+        document.getElementById("mm-title").style.color = blue;
     } else {
-        document.getElementById("pt-title").style.color = "#3498db";
-        document.getElementById("mm-title").style.color = "#3498db";
+        document.getElementById("pt-title").style.color = blue;
+        document.getElementById("mm-title").style.color = blue;
     }
 }
 
 function clearError() {
     document.getElementById("error").innerText = "";
     document.getElementById("error").style.display = "none";
-    document. getElementById("mm-title").style.color = "#3498db";
-    document. getElementById("pt-title").style.color = "#3498db";
+    document. getElementById("mm-title").style.color = blue;
+    document. getElementById("pt-title").style.color = blue;
 }
 
 function focusOnMm() {
@@ -207,9 +212,9 @@ var standard;
 function checkDidot() {
     uncheckHawks();
     uncheckFournier();
-    document.getElementById("standard-didot").style.borderColor = "#f39c12";
-    document.getElementById("standard-value-didot").style.color = "#f39c12";
-    document.getElementById("standard-name-didot").style.color = "#f39c12";
+    document.getElementById("standard-didot").style.borderColor = orange;
+    document.getElementById("standard-value-didot").style.color = orange;
+    document.getElementById("standard-name-didot").style.color = orange;
     standard="didot";
     emptyFieldsOnSwitch();
     focusAfterTypeSwitch();
@@ -218,9 +223,9 @@ function checkDidot() {
 function checkHawks() {
     uncheckDidot();
     uncheckFournier();
-    document.getElementById("standard-hawks").style.borderColor = "#f39c12";
-    document.getElementById("standard-value-hawks").style.color = "#f39c12";
-    document.getElementById("standard-name-hawks").style.color = "#f39c12";
+    document.getElementById("standard-hawks").style.borderColor = orange;
+    document.getElementById("standard-value-hawks").style.color = orange;
+    document.getElementById("standard-name-hawks").style.color = orange;
     standard="hawks";
     emptyFieldsOnSwitch();
     focusAfterTypeSwitch();
@@ -229,30 +234,30 @@ function checkHawks() {
 function checkFournier() {
     uncheckDidot();
     uncheckHawks();
-    document.getElementById("standard-fournier").style.borderColor = "#f39c12";
-    document.getElementById("standard-value-fournier").style.color = "#f39c12";
-    document.getElementById("standard-name-fournier").style.color = "#f39c12";
+    document.getElementById("standard-fournier").style.borderColor = orange;
+    document.getElementById("standard-value-fournier").style.color = orange;
+    document.getElementById("standard-name-fournier").style.color = orange;
     standard="fournier";
     emptyFieldsOnSwitch();
     focusAfterTypeSwitch();
 }
 
 function uncheckDidot() {
-    document.getElementById("standard-didot").style.borderColor = "#bdc3c7";
-    document.getElementById("standard-value-didot").style.color = "#bdc3c7";
-    document.getElementById("standard-name-didot").style.color = "#95a5a6";
+    document.getElementById("standard-didot").style.borderColor = gray;
+    document.getElementById("standard-value-didot").style.color = gray;
+    document.getElementById("standard-name-didot").style.color = gray;
 }
 
 function uncheckHawks() {
-    document.getElementById("standard-hawks").style.borderColor = "#bdc3c7";
-    document.getElementById("standard-value-hawks").style.color = "#bdc3c7";
-    document.getElementById("standard-name-hawks").style.color = "#95a5a6";
+    document.getElementById("standard-hawks").style.borderColor = gray;
+    document.getElementById("standard-value-hawks").style.color = gray;
+    document.getElementById("standard-name-hawks").style.color = gray;
 }
 
 function uncheckFournier() {
-    document.getElementById("standard-fournier").style.borderColor = "#bdc3c7";
-    document.getElementById("standard-value-fournier").style.color = "#bdc3c7";
-    document.getElementById("standard-name-fournier").style.color = "#95a5a6";
+    document.getElementById("standard-fournier").style.borderColor = gray;
+    document.getElementById("standard-value-fournier").style.color = gray;
+    document.getElementById("standard-name-fournier").style.color = gray;
 }
 
 function emptyFieldsOnSwitch() {
