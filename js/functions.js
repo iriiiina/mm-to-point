@@ -38,11 +38,15 @@ function highlightConvertionType(elementId) {
             document.getElementById("mm-value").style.borderColor = orange;
             document.getElementById("pt-value").style.borderColor = blue;
             convertionType = "mm";
+            document.getElementById("icon-convert-type-mm").style.display = "block";
+            document.getElementById("icon-convert-type-pt").style.display = "none";
             break;
         case "pt-value":
             document.getElementById("pt-value").style.borderColor = orange;
             document.getElementById("mm-value").style.borderColor = blue;
             convertionType = "pt";
+            document.getElementById("icon-convert-type-pt").style.display = "block";
+            document.getElementById("icon-convert-type-mm").style.display = "none";
             break;
     }
 }

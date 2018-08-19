@@ -88,6 +88,17 @@ a {
     background-color: #E8EBEC;
 }
 
+#icon-convert-type-mm {
+    height: 50px;
+    margin: -40px 0 -10px 210px;
+}
+
+#icon-convert-type-pt {
+    height: 50px;
+    margin: -40px 0 -10px -18px;
+    transform: rotate(180deg);
+}
+
 .measure {
     margin: 0 0 0 -60px;
     font-size: 10pt;
