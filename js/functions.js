@@ -156,14 +156,6 @@ function clearError() {
     document. getElementById("pt-title").style.color = "#3498db";
 }
 
-function selectOnMm() {
-    document.getElementById("mm-value").select();
-}
-
-function selectOnPt() {
-    document.getElementById("pt-value").select();
-}
-
 function focusOnMm() {
     document.getElementById("mm-value").focus();
 }
@@ -175,10 +167,8 @@ function focusOnPt() {
 function focusAfterTypeSwitch() {
     if (convertionType === "mm") {
         focusOnMm();
-        selectOnMm();
     } else if (convertionType === "pt") {
         focusOnPt();
-        selectOnPt();
     }
 }
 
