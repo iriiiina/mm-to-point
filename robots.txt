@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://mm-to-pt.irina-ivanova.eu/sitemap.xml
