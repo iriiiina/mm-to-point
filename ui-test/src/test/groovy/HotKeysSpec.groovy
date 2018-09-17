@@ -1,7 +1,9 @@
+import org.junit.Ignore
 import org.openqa.selenium.Keys
 import spock.lang.Unroll
 
-class HotKeys extends Specification {
+@Ignore
+class HotKeysSpec extends Specification {
 
     @Unroll
     def "[Enter] runs and empty convertion and returns error #errorMessage"() {

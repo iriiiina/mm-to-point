@@ -1,6 +1,6 @@
 import spock.lang.Unroll
 
-class Visual extends Specification {
+class VisualSpec extends Specification {
 
     @Unroll
     def "Clicking on #id makes it orange and other standards gray"() {

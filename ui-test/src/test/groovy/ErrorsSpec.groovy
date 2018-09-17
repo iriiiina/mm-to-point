@@ -1,6 +1,6 @@
 import spock.lang.Unroll
 
-class Errors extends Specification {
+class ErrorsSpec extends Specification {
 
     @Unroll
     def "When #description in #field, then error #errorMessage"() {

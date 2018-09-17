@@ -1,4 +1,4 @@
-class Convertion extends Specification {
+class ConvertionSpec extends Specification {
 
     def "Reset button empty all fields"() {
         given: "some value in mm input field"
