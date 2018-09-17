@@ -1,4 +1,6 @@
 language: java
+before_script:
+  - cd ui-test
 script:
-  - bash <(cd ui-test)
+  - mvn clean install
   - mvn test -B
