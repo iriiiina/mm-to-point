@@ -1,1 +1,4 @@
 language: java
+script:
+  - bash <(cd ui-test)
+  - mvn test -B
