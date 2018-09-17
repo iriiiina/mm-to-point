@@ -2,5 +2,4 @@ language: java
 before_script:
   - cd ui-test
 script:
-  - mvn clean install
-  - mvn test -B
+  - mvn clean test
