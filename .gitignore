@@ -1,2 +1,5 @@
 .DS_Store
 .vscode/
+ui-test/target
+ui-test/.mvn
+ui-test/.idea
