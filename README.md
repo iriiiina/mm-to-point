@@ -1,4 +1,4 @@
-[![Licence](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Licence](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Build Status](https://travis-ci.org/iriiiina/mm-to-pt.svg?branch=master)](https://travis-ci.org/iriiiina/mm-to-pt)
 
 # mm-to-pt | online converter
 Small online converter that helps you to convert millimetres to typographical points of different standards and vice versa. From Artemy Lebedev's article [The life and extraordinary adventures of a typographical point](http://www.artlebedev.com/mandership/81/) you can find out that there are at least 3 different standards of typographical point used in different countries. So you may have a different results according to your location in the world:
