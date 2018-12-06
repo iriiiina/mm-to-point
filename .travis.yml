@@ -1,6 +1,9 @@
 language: java
 dist: trusty
 
+addons:
+  chrome: stable
+
 before_script:
   - cd ui-test
   - "export DISPLAY=:99.0"
