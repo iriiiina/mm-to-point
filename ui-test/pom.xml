@@ -4,45 +4,40 @@
 
     <groupId>eu.irina-ivanova</groupId>
     <artifactId>ui-test</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
     <name>mm-to-pt converter ui-test</name>
     <url>https://mm-to-pt.irina-ivanova.eu</url>
 
     <properties>
-        <groovyVersion>2.4.11</groovyVersion>
-        <junitVersion>4.12</junitVersion>
-        <spockCoreVersion>1.0-groovy-2.4</spockCoreVersion>
-        <gebVersion>2.2</gebVersion>
-        <seleniumVersion>3.3.1</seleniumVersion>
-        <commonsLang3Version>3.5</commonsLang3Version>
+        <groovy.version>2.4.15</groovy.version>
+        <spock.version>1.0-groovy-2.4</spock.version>
+        <geb.version>2.2</geb.version>
+        <selenium.version>3.3.1</selenium.version>
+        <commons.lang3.version>3.5</commons.lang3.version>
 
-        <mavenSurefirePluginVersion>2.19</mavenSurefirePluginVersion>
-        <wrapperMavenPluginVersion>0.0.4</wrapperMavenPluginVersion>
-        <gMavenPluginVersion>1.5</gMavenPluginVersion>
-        <webdriverextensionsMavenPluginVersion>3.1.1</webdriverextensionsMavenPluginVersion>
-        <chromedriverVersion>2.27</chromedriverVersion>
+        <gmavenplus.plugin.version>1.5</gmavenplus.plugin.version>
+        <surefire.version>2.19</surefire.version>
+        <wrapper.version>0.0.4</wrapper.version>
+        <build.helper.version>3.0.0</build.helper.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
+
+        <!-- Groovy -->
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>${groovyVersion}</version>
+            <version>${groovy.version}</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junitVersion}</version>
-            <scope>test</scope>
-        </dependency>
+
+        <!-- Spock -->
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
-            <version>${spockCoreVersion}</version>
-            <scope>test</scope>
+            <version>${spock.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.codehaus.groovy</groupId>
@@ -50,55 +45,43 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- Geb -->
         <dependency>
             <groupId>org.gebish</groupId>
             <artifactId>geb-spock</artifactId>
-            <version>${gebVersion}</version>
-            <scope>test</scope>
+            <version>${geb.version}</version>
         </dependency>
+
+        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>${seleniumVersion}</version>
-            <scope>test</scope>
+            <version>${selenium.version}</version>
         </dependency>
+
+        <!-- Utils -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>${commonsLang3Version}</version>
-            <scope>test</scope>
+            <version>${commons.lang3.version}</version>
         </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${mavenSurefirePluginVersion}</version>
-                <configuration>
-                    <includes>
-                        <include>*Spec.*</include>
-                    </includes>
-                    <systemPropertyVariables>
-                        <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.rimerosolutions.maven.plugins</groupId>
-                <artifactId>wrapper-maven-plugin</artifactId>
-                <version>${wrapperMavenPluginVersion}</version>
-                <configuration>
-                    <mavenVersion>3.3.3</mavenVersion>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <version>${gMavenPluginVersion}</version>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>${gmavenplus.plugin.version}</version>
                 <executions>
                     <execution>
                         <goals>
+                            <goal>addSources</goal>
+                            <goal>compile</goal>
+                            <goal>addTestSources</goal>
                             <goal>testCompile</goal>
                         </goals>
                     </execution>
@@ -107,41 +90,58 @@
                     <dependency>
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-all</artifactId>
-                        <version>${groovyVersion}</version>
+                        <version>${groovy.version}</version>
+                        <scope>runtime</scope>
                     </dependency>
                 </dependencies>
             </plugin>
+
             <plugin>
-                <groupId>com.github.webdriverextensions</groupId>
-                <artifactId>webdriverextensions-maven-plugin</artifactId>
-                <version>${webdriverextensionsMavenPluginVersion}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>install-drivers</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <groupId>com.rimerosolutions.maven.plugins</groupId>
+                <artifactId>wrapper-maven-plugin</artifactId>
+                <version>${wrapper.version}</version>
                 <configuration>
-                    <drivers>
-                        <driver>
-                            <name>chromedriver</name>
-                            <version>${chromedriverVersion}</version>
-                            <platform>mac</platform>
-                        </driver>
-                        <driver>
-                            <name>chromedriver</name>
-                            <version>${chromedriverVersion}</version>
-                            <platform>linux</platform>
-                        </driver>
-                        <driver>
-                            <name>chromedriver</name>
-                            <version>${chromedriverVersion}</version>
-                            <platform>windows</platform>
-                        </driver>
-                    </drivers>
+                    <mavenVersion>3.3.3</mavenVersion>
                 </configuration>
             </plugin>
+
+            <!--
+                Makes it clear to IntelliJ that the src/main/groovy and src/test/groovy
+                directories contain sources and test sources. If you do not have this,
+                IntelliJ will not treat the directories properly.
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>${build.helper.version}</version>
+                <executions>
+                    <execution>
+                        <id>add-groovy-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/groovy</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>add-groovy-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/test/groovy</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 </project>

@@ -1,4 +1,4 @@
-class ConvertionSpec extends Specification {
+class ConvertionTest extends Specification {
 
     def "Reset button empty all fields"() {
         given: "some value in mm input field"
@@ -20,7 +20,5 @@ class ConvertionSpec extends Specification {
         and: "pt standard is Didot"
         assert $(didotId).css("border-color") == orange
         assert $(hawksId).css("border-color") == gray
-
-
     }
 }

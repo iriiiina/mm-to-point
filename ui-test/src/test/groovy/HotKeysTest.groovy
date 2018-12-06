@@ -3,7 +3,7 @@ import org.openqa.selenium.Keys
 import spock.lang.Unroll
 
 @Ignore
-class HotKeysSpec extends Specification {
+class HotKeysTest extends Specification {
 
     @Unroll
     def "[Enter] runs and empty convertion and returns error #errorMessage"() {
