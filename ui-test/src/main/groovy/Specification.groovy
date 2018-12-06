@@ -30,7 +30,7 @@ class Specification extends GebSpec {
     @Shared
     String ptErrorMessage = "Points can be only positive integer or float number"
 
-    def setup() {
+    def setupSpec() {
         go url
     }
 }

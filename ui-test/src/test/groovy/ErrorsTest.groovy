@@ -14,7 +14,7 @@ class ErrorsTest extends Specification {
         $(convertButtonId).click()
 
         then: "#errorMessage is shown"
-        assert $("#error").text() == errorMessage
+        $("#error").text() == errorMessage
 
         where:
         description   | field     | value | errorMessage

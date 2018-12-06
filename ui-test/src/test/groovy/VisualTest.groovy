@@ -8,9 +8,9 @@ class VisualTest extends Specification {
         $(id).click()
 
         then: "clicked standard is orange"
-        assert $(didotId).css("border-color") == didotColor
-        assert $(hawksId).css("border-color") == hawksColor
-        assert $(fournierId).css("border-color") == fournierColor
+        $(didotId).css("border-color") == didotColor
+        $(hawksId).css("border-color") == hawksColor
+        $(fournierId).css("border-color") == fournierColor
 
         where:
         id         | didotColor | hawksColor | fournierColor
@@ -25,8 +25,8 @@ class VisualTest extends Specification {
         $(id).click()
 
         then: "clicked input is orange"
-        assert $(mmInputId).css("border-color") == mmColor
-        assert $(ptInputId).css("border-color") == ptColor
+        $(mmInputId).css("border-color") == mmColor
+        $(ptInputId).css("border-color") == ptColor
 
         where:
         id        | mmColor | ptColor
@@ -39,22 +39,22 @@ class VisualTest extends Specification {
         $(mmInputId).click()
 
         then: "#icon-convert-type-mm is visible"
-        assert $("#icon-convert-type-mm").displayed
-        assert !$("#icon-convert-type-pt").displayed
+        $("#icon-convert-type-mm").displayed
+        !$("#icon-convert-type-pt").displayed
 
         when: "click on pt input field"
         $(ptInputId).click()
 
         then: "#icon-convert-type-pt is visible"
-        assert !$("#icon-convert-type-mm").displayed
-        assert $("#icon-convert-type-pt").displayed
+        !$("#icon-convert-type-mm").displayed
+        $("#icon-convert-type-pt").displayed
 
         when: "click on mm input field again"
         $(mmInputId).click()
 
         then: "#icon-convert-type-mm is visible"
-        assert $("#icon-convert-type-mm").displayed
-        assert !$("#icon-convert-type-pt").displayed
+        $("#icon-convert-type-mm").displayed
+        !$("#icon-convert-type-pt").displayed
     }
 
     def "Clicking on hint hides it"() {
@@ -67,9 +67,9 @@ class VisualTest extends Specification {
         $("#tips-header").click()
 
         then: "hint is hidden"
-        assert !$("#tips-hidden").displayed
-        assert !$("#tips-open").displayed
-        assert $("#tips-close").displayed
+        !$("#tips-hidden").displayed
+        !$("#tips-open").displayed
+        $("#tips-close").displayed
     }
 
 }

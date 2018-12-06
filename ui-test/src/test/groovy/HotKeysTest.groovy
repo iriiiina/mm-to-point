@@ -1,8 +1,6 @@
-import org.junit.Ignore
 import org.openqa.selenium.Keys
 import spock.lang.Unroll
 
-@Ignore
 class HotKeysTest extends Specification {
 
     @Unroll
@@ -11,10 +9,10 @@ class HotKeysTest extends Specification {
         $(inputId).click()
 
         and: "click on [Enter] key"
-        $(inputId).value() << Keys.RETURN
+        $(inputId).value(Keys.RETURN)
 
         then: "error message is shown"
-        assert $("#error").text() == errorMessage
+        $("#error").text() == errorMessage
 
         where:
         inputId   | errorMessage
@@ -25,7 +23,7 @@ class HotKeysTest extends Specification {
     @Unroll
     def "Key [#key] changes the standard"() {
         when: "insert #key"
-        $(mmInputId).value() << key
+        $(mmInputId).value(key)
 
         then: "standard is changed"
         $(standard).css("border-color") == orange

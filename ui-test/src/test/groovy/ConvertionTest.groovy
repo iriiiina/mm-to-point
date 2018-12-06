@@ -14,11 +14,11 @@ class ConvertionTest extends Specification {
         $(resetButtonId).click()
 
         then: "all fields are empty"
-        assert $(mmInputId).value() == ""
-        assert $(ptInputId).value() == ""
+        $(mmInputId).value() == ""
+        $(ptInputId).value() == ""
 
         and: "pt standard is Didot"
-        assert $(didotId).css("border-color") == orange
-        assert $(hawksId).css("border-color") == gray
+        $(didotId).css("border-color") == orange
+        $(hawksId).css("border-color") == gray
     }
 }

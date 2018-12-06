@@ -18,8 +18,6 @@ File findDriverExecutable() {
                 it.name.contains("linux")
             } else if (IS_OS_MAC) {
                 it.name.contains("mac")
-            } else if (IS_OS_WINDOWS) {
-                it.name.contains("windows")
             }
         }
     }
@@ -31,5 +29,3 @@ driver = {
         .usingDriverExecutable(findDriverExecutable())
     new ChromeDriver(serviceBuilder.build())
 }
-
-baseUrl = "https://mm-to-pt.irina-ivanova.eu"

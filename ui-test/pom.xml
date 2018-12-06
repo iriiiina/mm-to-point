@@ -12,11 +12,10 @@
         <groovy.version>2.4.15</groovy.version>
         <spock.version>1.0-groovy-2.4</spock.version>
         <geb.version>2.2</geb.version>
-        <selenium.version>3.3.1</selenium.version>
-        <commons.lang3.version>3.5</commons.lang3.version>
+        <selenium.version>3.141.59</selenium.version>
+        <commons.lang3.version>3.8.1</commons.lang3.version>
 
         <gmavenplus.plugin.version>1.5</gmavenplus.plugin.version>
-        <surefire.version>2.19</surefire.version>
         <wrapper.version>0.0.4</wrapper.version>
         <build.helper.version>3.0.0</build.helper.version>
 
