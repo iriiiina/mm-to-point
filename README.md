@@ -8,7 +8,7 @@ Small online converter that helps you to convert millimetres to typographical po
 
 ## Screenshots
 
-![](img/screenshot/screenshot-2-1.png) ![](img/screenshot/screenshot-2-1.png) 
+![](img/screenshot/screenshot-1-4.png) ![](img/screenshot/screenshot-2-4.png) 
 
 ## Author
 Irina Ivanova, [irina.ivanova@protonmail.com](irina.ivanova@protonmail.com)
