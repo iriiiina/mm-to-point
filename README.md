@@ -14,7 +14,7 @@ Small online converter that helps you to convert millimetres to typographical po
 Irina Ivanova, [irina.ivanova@protonmail.com](irina.ivanova@protonmail.com)
 
 ## Issues and Problems
-If you have any issues, problems, questions or suggestions about the converter, please let me know. You van either write me to my email [irina.ivanova@protonmail.com](irina.ivanova@protonmail.com) or create an [Issue](https://github.com/iriiiina/mm-to-point/issues) here at this GitHub repo.
+If you have any issues, problems, questions or suggestions about the converter, please let me know. You can either write me to my email [irina.ivanova@protonmail.com](irina.ivanova@protonmail.com) or create an [Issue](https://github.com/iriiiina/mm-to-point/issues) here at this GitHub repo.
 
 ## Ads
 I am planning to insert some ads to pay back my free time I spent on this app. This will be small civil add, not the overhelming one, so please don't be mad about it.
