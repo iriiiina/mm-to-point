@@ -13,6 +13,7 @@
         <spock.version>1.0-groovy-2.4</spock.version>
         <geb.version>2.2</geb.version>
         <selenium.version>3.141.59</selenium.version>
+        <rest.assured.version>2.9.0</rest.assured.version>
         <commons.lang3.version>3.8.1</commons.lang3.version>
 
         <gmavenplus.plugin.version>1.5</gmavenplus.plugin.version>
@@ -58,6 +59,14 @@
             <artifactId>selenium-chrome-driver</artifactId>
             <version>${selenium.version}</version>
         </dependency>
+
+        <!-- Rest Assured -->
+        <dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest.assured.version}</version>
+        </dependency>
+
 
         <!-- Utils -->
         <dependency>

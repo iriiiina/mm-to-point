@@ -1,5 +1,9 @@
 class ConvertionTest extends Specification {
 
+    def setupSpec() {
+        go url
+    }
+
     def "Reset button empty all fields"() {
         given: "some value in mm input field"
         $(mmInputId).value() << "12345"

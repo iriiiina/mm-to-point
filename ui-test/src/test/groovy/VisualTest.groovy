@@ -2,6 +2,10 @@ import spock.lang.Unroll
 
 class VisualTest extends Specification {
 
+    def setupSpec() {
+        go url
+    }
+
     @Unroll
     def "Clicking on #id makes it orange and other standards gray"() {
         when: "click on #id"

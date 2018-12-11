@@ -3,6 +3,10 @@ import spock.lang.Unroll
 
 class HotKeysTest extends Specification {
 
+    def setupSpec() {
+        go url
+    }
+
     @Unroll
     def "[Enter] runs and empty convertion and returns error #errorMessage"() {
         when: "click on #inputId"

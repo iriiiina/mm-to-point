@@ -2,6 +2,10 @@ import spock.lang.Unroll
 
 class ErrorsTest extends Specification {
 
+    def setupSpec() {
+        go url
+    }
+
     @Unroll
     def "When #description in #field, then error #errorMessage"() {
         given: "click on #field"

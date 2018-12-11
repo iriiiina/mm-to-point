@@ -29,8 +29,4 @@ class Specification extends GebSpec {
     String mmErrorMessage = "Millimeters can be only positive integer or float number"
     @Shared
     String ptErrorMessage = "Points can be only positive integer or float number"
-
-    def setupSpec() {
-        go url
-    }
 }
