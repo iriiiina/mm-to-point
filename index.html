@@ -1,196 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107903881-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag("js", new Date());
-
-        gtag("config", "UA-107903881-2");
-    </script>
-
-    <title>mm-to-pt | convert millimetres to points and points to millimetres</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- JS and CSS files -->
-    <link rel="stylesheet" type="text/css" href="css/default.css">
-    <link rel="stylesheet" type="text/css" href="css/768px.css" media="screen and (min-width:768px)">
-    <script src="js/functions.js"></script>
-
-    <!-- Social media meta tags -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="description" content="Online converter of millimetres to typographical points and vice versa. Different standards are available: Didot, Hawks, Fournier!"
-    />
-    <meta property="og:url" content="https://mm-to-pt.irina-ivanova.eu" />
-    <meta property="og:site_name" content="mm-to-pt | converter" />
-    <meta property="og:title" content="mm-to-pt | converter" />
-    <meta property="og:description" content="Online converter of millimetres to typographical points and vice versa. Different standards are available: Didot, Hawks, Fournier!"
-    />
-    <meta property="og:image" content="https://mm-to-pt.irina-ivanova.eu/img/meta/preview.jpg" />
-    <meta property="og:image:alt" content="Blur button classic close-up" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#F39C12" />
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://mm-to-pt.irina-ivanova.eu/img/meta/icon-180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="https://mm-to-pt.irina-ivanova.eu/img/meta/icon-192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="https://mm-to-pt.irina-ivanova.eu/img/meta/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="https://mm-to-pt.irina-ivanova.eu/img/meta/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="https://mm-to-pt.irina-ivanova.eu/img/meta/favicon-16x16.png" />
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107903881-2"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "UA-107903881-2");
+ </script>
+ <title>mm-to-pt | convert millimetres to points and points to millimetres</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- JS and CSS files -->
+ <link rel="stylesheet" type="text/css" href="css/default.css">
+ <link rel="stylesheet" type="text/css" href="css/768px.css" media="screen and (min-width:768px)">
+ <script src="js/functions.js"></script>
+ <!-- Social media meta tags -->
+ <link rel="manifest" href="/manifest.json">
+ <meta name="description" content="Online converter of millimetres to typographical points and vice versa. Different standards are available: Didot, Hawks, Fournier!">
+ <meta property="og:url" content="https://mm-to-pt.irina-ivanova.eu">
+ <meta property="og:site_name" content="mm-to-pt | converter">
+ <meta property="og:title" content="mm-to-pt | converter">
+ <meta property="og:description" content="Online converter of millimetres to typographical points and vice versa. Different standards are available: Didot, Hawks, Fournier!">
+ <meta property="og:image" content="https://mm-to-pt.irina-ivanova.eu/img/meta/preview.jpg">
+ <meta property="og:image:alt" content="Blur button classic close-up">
+ <meta property="og:locale" content="en">
+ <meta property="og:type" content="website">
+ <meta name="theme-color" content="#F39C12">
+ <!-- Favicons -->
+ <link rel="apple-touch-icon" sizes="180x180" href="https://mm-to-pt.irina-ivanova.eu/img/meta/icon-180.png">
+ <link rel="icon" type="image/png" sizes="192x192" href="https://mm-to-pt.irina-ivanova.eu/img/meta/icon-192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="https://mm-to-pt.irina-ivanova.eu/img/meta/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="https://mm-to-pt.irina-ivanova.eu/img/meta/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="https://mm-to-pt.irina-ivanova.eu/img/meta/favicon-16x16.png">
 </head>
-
 <body>
-    <div id="tips">
-        <p id="tips-header" onclick="expandTips();">use it like a pro!
-            <svg class="tips-faces" id="tips-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-280c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
-            <svg class="tips-faces" id="tips-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm141.4 389.4c-37.8 37.8-88 58.6-141.4 58.6s-103.6-20.8-141.4-58.6S48 309.4 48 256s20.8-103.6 58.6-141.4S194.6 56 248 56s103.6 20.8 141.4 58.6S448 202.6 448 256s-20.8 103.6-58.6 141.4zM328 224c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm-160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm194.4 64H133.6c-8.2 0-14.5 7-13.5 15 7.5 59.2 58.9 105 121.1 105h13.6c62.2 0 113.6-45.8 121.1-105 1-8-5.3-15-13.5-15z"></path></svg>
-        </p>
-        <div id="tips-hidden">
-            <p>you can use hot keys <code>[D]</code>, <code>[H]</code> and <code>[F]</code> for quick switching between pt
-                standards</p>
-            <p>if focus remains on mm field, then mm value will be converted to pt</p>
-            <p>if focus remains on pt field, then pt value will be converted to mm</p>
-            <p><code>[enter]</code> works as well for submitting the form</p>
-        </div>
-    </div>
-
-    <div id="container">
-        <h1 id="header">mm
-            <svg id="icon-arrows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
-                />
-            </svg>
-            pt
-        </h1>
-
-        <div id="standards">
-            <div class="standard" id="standard-didot" onclick="checkDidot();">
-                <p class="standard-value" id="standard-value-didot">1pt = 0.3759mm</p>
-                <p class="standard-name" id="standard-name-didot">Didot</p>
-            </div>
-            <div class="standard" id="standard-hawks" onclick="checkHawks();">
-                <p class="standard-value" id="standard-value-hawks">1pt = 0.3514mm</p>
-                <p class="standard-name" id="standard-name-hawks">Hawks</p>
-            </div>
-            <div class="standard" id="standard-fournier" onclick="checkFournier();">
-                <p class="standard-value" id="standard-value-fournier">1pt = 0.364mm</p>
-                <p class="standard-name" id="standard-name-fournier">Fournier</p>
-            </div>
-        </div>
-
-        <form id="form">
-            <div class="form-input">
-
-                <input type="number" name="mm" id="mm-value" onfocus="highlightConvertionType('mm-value');">
-                <label for="mm-value" class="measure" id="mm-title">mm</label>
-                <span><img id="icon-convert-type-mm" src="img/arrow.svg" alt="Arrow down: convert mm to pt" /></span>
-                <span><img id="icon-convert-type-pt" src="img/arrow.svg" alt="Arrow up: convert pt to mm" /></span>
-
-            </div>
-            <div class="form-input">
-                <input type="number" name="point" id="pt-value" onfocus="highlightConvertionType('pt-value');">
-                <label for="pt-value" class="measure" id="pt-title">pt</label>
-            </div>
-            <div class="form-input disabled">
-                <input type="number" name="cicero" id="cicero-value" disabled>
-                <label for="cicero-value" class="measure">cicero</label>
-            </div>
-            <div class="form-input disabled">
-                <input type="number" name="quad" id="quad-value" disabled>
-                <label for="quad-value" class="measure">quad</label>
-            </div>
-            <div id="form-button">
-                <input type="button" id="reset-button" value="Reset" onclick="resetFields();">
-                <input type="button" id="convert-button" value="Convert" onclick="convert();">
-            </div>
-        </form>
-
-        <script>
-            checkDidot();
-
-            document.getElementById("mm-value").addEventListener("keyup", function (event) {
-                event.preventDefault();
-                // 13 === Enter
-                if (event.keyCode === 13) {
-                    document.getElementById("convert-button").click();
-                }
-            });
-
-            document.getElementById("pt-value").addEventListener("keyup", function (event) {
-                event.preventDefault();
-                // 13 === Enter
-                if (event.keyCode === 13) {
-                    document.getElementById("convert-button").click();
-                }
-            });
-
-            document.addEventListener("keyup", function (event) {
-                event.preventDefault();
-                // 68 === d
-                if (event.keyCode === 68) {
-                    checkDidot();
-                }
-            });
-
-            document.addEventListener("keyup", function (event) {
-                event.preventDefault();
-                // 72 === h
-                if (event.keyCode === 72) {
-                    checkHawks();
-                }
-            });
-
-            document.addEventListener("keyup", function (event) {
-                event.preventDefault();
-                // 70 === f
-                if (event.keyCode === 70) {
-                    checkFournier();
-                }
-            });
-        </script>
-
-        <div id="error">
-        </div>
-
-        <div id="footer">
-            <div id="description">
-                <p>This app converts millimetres to typographical points of different standards and is based on Artemy Lebedev's
-                    article about <a href="https://www.artlebedev.com/mandership/81/" title="The life and extraordinary adventures of a typographical point">The
-                        life and extraordinary adventures of a typographical point</a></p>
-            </div>
-
-            <div id="contacts">
-                <p class="footer-p">Irina Ivanova</p>
-                <p class="footer-p">
-                    <a href="mailto:irina.ivanova@protonmail.com" title="irina.ivanova@protonmail.com">irina.ivanova@protonmail.com</a>
-                </p>
-                <p class="footer-p">
-                    <a href="https://github.com/iriiiina/mm-to-point" title="GitHub repo iriiiina/mm-to-point">
-                        <svg id="icon-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
-                    </a>
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Google Service Worker -->
-    <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.getRegistrations().then(function (registrations) {
-                for (let registration of registrations) {
-                    registration.unregister()
-                }
-            });
-        }
-    </script>
-
+ <div id="tips">
+  <p id="tips-header" onclick="expandTips();">use it like a pro!
+   <svg class="tips-faces" id="tips-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-280c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
+   <svg class="tips-faces" id="tips-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm141.4 389.4c-37.8 37.8-88 58.6-141.4 58.6s-103.6-20.8-141.4-58.6S48 309.4 48 256s20.8-103.6 58.6-141.4S194.6 56 248 56s103.6 20.8 141.4 58.6S448 202.6 448 256s-20.8 103.6-58.6 141.4zM328 224c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm-160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm194.4 64H133.6c-8.2 0-14.5 7-13.5 15 7.5 59.2 58.9 105 121.1 105h13.6c62.2 0 113.6-45.8 121.1-105 1-8-5.3-15-13.5-15z"></path></svg>
+  </p>
+ <div id="tips-hidden">
+  <p>you can use hot keys <code>[D]</code>, <code>[H]</code> and <code>[F]</code> for quick switching between pt standards</p>
+  <p>if focus remains on mm field, then mm value will be converted to pt</p>
+  <p>if focus remains on pt field, then pt value will be converted to mm</p>
+  <p><code>[enter]</code> works as well for submitting the form</p>
+ </div>
+</div>
+<div id="container">
+ <h1 id="header">mm
+  <svg id="icon-arrows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+   <path d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"/>
+  </svg> pt
+ </h1>
+ <div id="standards">
+  <div class="standard" id="standard-didot" onclick="checkDidot();">
+   <p class="standard-value" id="standard-value-didot">1pt = 0.3759mm</p>
+   <p class="standard-name" id="standard-name-didot">Didot</p>
+  </div>
+  <div class="standard" id="standard-hawks" onclick="checkHawks();">
+   <p class="standard-value" id="standard-value-hawks">1pt = 0.3514mm</p>
+   <p class="standard-name" id="standard-name-hawks">Hawks</p>
+  </div>
+  <div class="standard" id="standard-fournier" onclick="checkFournier();">
+   <p class="standard-value" id="standard-value-fournier">1pt = 0.364mm</p>
+   <p class="standard-name" id="standard-name-fournier">Fournier</p>
+  </div>
+ </div>
+ <form id="form">
+  <div class="form-input">
+   <input type="number" name="mm" id="mm-value" onfocus="highlightConvertionType('mm-value');">
+   <label for="mm-value" class="measure" id="mm-title">mm</label>
+   <span><img id="icon-convert-type-mm" src="img/arrow.svg" alt="Arrow down: convert mm to pt" /></span>
+   <span><img id="icon-convert-type-pt" src="img/arrow.svg" alt="Arrow up: convert pt to mm" /></span>
+  </div>
+  <div class="form-input">
+   <input type="number" name="point" id="pt-value" onfocus="highlightConvertionType('pt-value');">
+   <label for="pt-value" class="measure" id="pt-title">pt</label>
+  </div>
+  <div class="form-input disabled">
+   <input type="number" name="cicero" id="cicero-value" disabled>
+   <label for="cicero-value" class="measure">cicero</label>
+  </div>
+  <div class="form-input disabled">
+   <input type="number" name="quad" id="quad-value" disabled>
+   <label for="quad-value" class="measure">quad</label>
+  </div>
+  <div id="form-button">
+   <input type="button" id="reset-button" value="Reset" onclick="resetFields();">
+   <input type="button" id="convert-button" value="Convert" onclick="convert();">
+  </div>
+ </form>
+ <script>
+  checkDidot();
+  document.getElementById("mm-value").addEventListener("keyup", function (event) {
+   event.preventDefault();
+   // 13 === Enter
+   if (event.keyCode === 13) {
+    document.getElementById("convert-button").click();
+   }});
+  document.getElementById("pt-value").addEventListener("keyup", function (event) {
+   event.preventDefault();
+   // 13 === Enter
+   if (event.keyCode === 13) {
+    document.getElementById("convert-button").click();
+   }});
+  document.addEventListener("keyup", function (event) {
+   event.preventDefault();
+   // 68 === d
+   if (event.keyCode === 68) {
+    checkDidot();
+   }});
+  document.addEventListener("keyup", function (event) {
+   event.preventDefault();
+   // 72 === h
+   if (event.keyCode === 72) {
+    checkHawks();
+   }});
+  document.addEventListener("keyup", function (event) {
+   event.preventDefault();
+   // 70 === f
+   if (event.keyCode === 70) {
+    checkFournier();
+   }});
+ </script>
+ <div id="error"></div>
+ <div id="footer">
+  <div id="description">
+   <p>This app converts millimetres to typographical points of different standards and is based on Artemy Lebedev's article about <a href="https://www.artlebedev.com/mandership/81/" title="The life and extraordinary adventures of a typographical point">The life and extraordinary adventures of a typographical point</a></p>
+  </div>
+  <div id="contacts">
+   <p class="footer-p">Irina Ivanova</p>
+   <p class="footer-p"><a href="https://irina-ivanova.eu" title="irina-ivanova.eu">irina-ivanova.eu</a></p>
+   <p class="footer-p"><a href="mailto:irina.ivanova@protonmail.com" title="irina.ivanova@protonmail.com">irina.ivanova@protonmail.com</a></p>
+   <p class="footer-p"><a href="https://github.com/iriiiina/mm-to-point" title="GitHub repo iriiiina/mm-to-point"><svg id="icon-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg></a></p>
+  </div>
+ </div>
+</div>
+<!-- Google Service Worker -->
+<script>
+if ("serviceWorker" in navigator) {
+ navigator.serviceWorker.getRegistrations().then(function (registrations) {
+  for (let registration of registrations) {
+   registration.unregister()
+  }});}
+</script>
 </body>
-
 </html>
