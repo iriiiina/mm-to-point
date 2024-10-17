@@ -9,7 +9,7 @@
     <url>https://mm-to-pt.irina-ivanova.eu</url>
 
     <properties>
-        <groovy.version>2.4.15</groovy.version>
+        <groovy.version>2.4.21</groovy.version>
         <spock.version>1.0-groovy-2.4</spock.version>
         <geb.version>2.2</geb.version>
         <selenium.version>3.141.59</selenium.version>
